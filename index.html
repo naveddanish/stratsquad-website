@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>StratSquad | Strategy • Transformation • Growth</title>
+  <meta name="description" content="StratSquad partners with founders, boards, and leadership teams to build clarity, enable confident growth, and create long-term enterprise value through strategic business expansion and transformation.">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+<header class="site-header">
+  <div class="header-container">
+
+    <div class="logo-area">
+      <a href="index.html">
+        <span class="logo">StratSquad</span>
+        <span class="tagline">Strategy • Transformation • Growth</span>
+      </a>
+    </div>
+
+    <!-- Hamburger Menu Button -->
+    <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html" class="active">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="digital.html">Digital</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <div class="hero-container">
+
+    <div class="hero-text">
+      <h1>
+        Strategic Business<br>
+        Expansion &<br>
+        Transformation for<br>
+        <span>High-Growth Enterprises</span>
+      </h1>
+
+      <p class="hero-subtext">
+        StratSquad helps organisations scale, transform, and build long-term business value through consumer-centric strategy, omni-channel design, and technology-driven innovation.
+      </p>
+
+      <div class="hero-cta">
+        <a href="mailto:connect@stratsquad.com" class="hero-btn primary">
+          Send an Email
+        </a>
+        <a href="contact.html" class="hero-btn secondary">
+          Book a Consultation
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-image">
+      <img src="image.png" alt="Strategic business planning session with StratSquad consultants">
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= BRIEF INTRO ================= -->
+<section class="brief-intro">
+  <div class="intro-container">
+
+    <h2 class="section-title">Clarity Before Scale</h2>
+
+    <p>
+      StratSquad works with high-growth organisations to align
+      strategy, execution, and technology — ensuring progress
+      is intentional, resilient, and sustainable.
+    </p>
+
+    <a href="about.html" class="soft-btn">Discover More</a>
+
+  </div>
+</section>
+
+<!-- ================= SERVICES ================= -->
+<section class="services-preview">
+  <div class="services-container">
+
+    <div class="services-header">
+     <h2 class="section-title">How We Help You Grow</h2>
+      <p>Focused solutions designed for long-term strategic impact</p>
+
+      <a href="services.html" class="soft-btn">View All Services</a>
+    </div>
+
+    <div class="services-grid">
+
+      <div class="service-card">
+        <span class="service-number">01</span>
+        <h3>Business Strategy</h3>
+        <p>
+          Market analysis, growth strategy, and operating models
+          aligned with your long-term vision.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <span class="service-number">02</span>
+        <h3>Digital Transformation</h3>
+        <p>
+          Technology-led transformation across platforms,
+          processes, and customer experience.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <span class="service-number">03</span>
+        <h3>Operational Excellence</h3>
+        <p>
+          Streamlining systems and decision-making to drive
+          efficiency, scale, and accountability.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="site-footer">
+  <div class="footer-container">
+
+    <div class="footer-logo">StratSquad</div>
+    <div class="footer-tagline">Strategy • Transformation • Growth</div>
+
+    <div class="footer-info">
+      <p>Mumbai, India</p>
+      <p><a href="mailto:connect@stratsquad.com">connect@stratsquad.com</a></p>
+    </div>
+
+    <div class="footer-copy">
+      &copy; 2026 StratSquad. All rights reserved.
+    </div>
+
+  </div>
+</footer>
+
+<!-- ================= JAVASCRIPT ================= -->
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('navLinks');
+  
+  // Toggle menu
+  hamburger.addEventListener('click', function(e) {
+    e.stopPropagation();
+    this.classList.toggle('active');
+    navLinks.classList.toggle('active');
+    
+    // Prevent body scroll when menu is open
+    if (navLinks.classList.contains('active')) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+  });
+  
+  // Close menu when clicking nav links
+  const navItems = navLinks.querySelectorAll('a');
+  navItems.forEach(item => {
+    item.addEventListener('click', function() {
+      hamburger.classList.remove('active');
+      navLinks.classList.remove('active');
+      document.body.style.overflow = '';
+    });
+  });
+  
+  // Close menu when clicking outside
+  document.addEventListener('click', function(e) {
+    if (window.innerWidth <= 768) {
+      if (!navLinks.contains(e.target) && !hamburger.contains(e.target)) {
+        hamburger.classList.remove('active');
+        navLinks.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    }
+  });
+  
+  // Reset on window resize
+  window.addEventListener('resize', function() {
+    if (window.innerWidth > 768) {
+      hamburger.classList.remove('active');
+      navLinks.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+  });
+</script>
+
+</body>
+</html>

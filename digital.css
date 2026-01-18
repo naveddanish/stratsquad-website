@@ -1,0 +1,411 @@
+/* ========================
+   DIGITAL PAGE STYLES
+======================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #faf9f6;
+  color: #2f2f2f;
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+/* ========================
+   PAGE INTRO
+======================== */
+.digital-intro {
+  position: relative;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: linear-gradient(135deg, #1a1a1a 0%, #2f2f2f 100%);
+  padding: 220px 40px 140px;
+  color: #ffffff;
+  margin-top: 80px;
+}
+
+.intro-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+.digital-intro .intro-container {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+}
+
+.digital-intro h1 {
+  font-size: 56px;
+  font-weight: 700;
+  letter-spacing: -1px;
+  margin-bottom: 28px;
+}
+
+.digital-intro p {
+  font-size: 20px;
+  line-height: 1.8;
+  color: #e6e6e6;
+}
+
+/* ========================
+   OVERVIEW SECTION
+======================== */
+.digital-overview {
+  background: #faf9f6;
+  padding: 100px 40px 60px;
+}
+
+.content-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.content-container.narrow {
+  max-width: 900px;
+}
+
+.section-title {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  color: #2f2f2f;
+}
+
+.section-title.center {
+  text-align: center;
+}
+
+.overview-text {
+  font-size: 18px;
+  line-height: 1.9;
+  color: #5f5f5f;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.overview-text::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: #8a6a4f;
+  margin: 40px auto 0;
+}
+
+/* ========================
+   CAPABILITY SECTIONS
+======================== */
+.capability-section {
+  background: #faf9f6;
+  padding: 60px 40px 100px;
+}
+
+.capability-section.alt-bg {
+  background: #f1ece4;
+}
+
+.capability-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.capability-subtitle {
+  font-size: 18px;
+  color: #5f5f5f;
+  max-width: 700px;
+  margin: 16px auto 0;
+  line-height: 1.8;
+}
+
+.capability-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 32px;
+  margin-top: 40px;
+}
+
+.capabilities-list {
+  max-width: 800px;
+  margin: 40px auto;
+}
+
+.capabilities-list h3 {
+  font-size: 22px;
+  font-weight: 600;
+  margin: 30px 0 20px;
+  color: #2f2f2f;
+}
+
+.capabilities-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.capabilities-list ul li {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #5f5f5f;
+  margin-bottom: 14px;
+  padding-left: 28px;
+  position: relative;
+}
+
+.capabilities-list ul li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #8a6a4f;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.capability-card {
+  background: #ffffff;
+  padding: 40px 35px;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+  border: 1px solid #e6e1da;
+}
+
+.capability-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 40px rgba(138, 106, 79, 0.15);
+  border-color: #8a6a4f;
+}
+
+.card-icon {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.capability-card h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 14px;
+  color: #2f2f2f;
+}
+
+.capability-card p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #5f5f5f;
+}
+
+/* ========================
+   EXPERTISE SECTION
+======================== */
+.expertise-section {
+  background: #faf9f6;
+  padding: 100px 40px;
+}
+
+.expertise-text {
+  font-size: 17px;
+  line-height: 1.9;
+  color: #5f5f5f;
+  text-align: center;
+  margin: 30px auto 50px;
+}
+
+.expertise-areas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.expertise-tag {
+  background: #ffffff;
+  border: 2px solid #8a6a4f;
+  color: #8a6a4f;
+  padding: 12px 28px;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.expertise-tag:hover {
+  background: #8a6a4f;
+  color: #ffffff;
+}
+
+/* ========================
+   CTA SECTION
+======================== */
+.digital-cta {
+  background: linear-gradient(135deg, #2f2f2f 0%, #1a1a1a 100%);
+  padding: 100px 40px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.cta-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.digital-cta h2 {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.digital-cta p {
+  font-size: 19px;
+  color: #e6e6e6;
+  margin-bottom: 40px;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.cta-btn {
+  padding: 16px 40px;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.cta-btn.primary {
+  background: #8a6a4f;
+  color: #ffffff;
+}
+
+.cta-btn.primary:hover {
+  background: #6d5440;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(138, 106, 79, 0.3);
+}
+
+.cta-btn.secondary {
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  color: #ffffff;
+}
+
+.cta-btn.secondary:hover {
+  border-color: #d4a574;
+  background: rgba(212, 165, 116, 0.1);
+}
+
+/* ========================
+   RESPONSIVE
+======================== */
+@media (max-width: 768px) {
+  /* Page Intro */
+  .digital-intro {
+    padding: 160px 20px 100px;
+    min-height: 60vh;
+  }
+
+  .digital-intro h1 {
+    font-size: 36px;
+  }
+
+  .digital-intro p {
+    font-size: 16px;
+  }
+
+  /* Section Titles */
+  .section-title {
+    font-size: 28px;
+  }
+
+  .overview-text,
+  .capability-subtitle,
+  .expertise-text {
+    font-size: 16px;
+  }
+
+  /* Capability Grid */
+  .capability-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .capability-card {
+    padding: 30px 25px;
+  }
+
+  .card-icon {
+    font-size: 40px;
+  }
+
+  .capability-card h3 {
+    font-size: 18px;
+  }
+
+  /* Sections */
+  .digital-overview,
+  .capability-section,
+  .expertise-section,
+  .digital-cta {
+    padding: 80px 20px;
+  }
+
+  /* CTA */
+  .digital-cta h2 {
+    font-size: 28px;
+  }
+
+  .digital-cta p {
+    font-size: 16px;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cta-btn {
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+  }
+
+  /* Expertise Tags */
+  .expertise-tag {
+    padding: 10px 20px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .digital-intro h1 {
+    font-size: 28px;
+  }
+
+  .digital-intro p {
+    font-size: 15px;
+  }
+
+  .section-title {
+    font-size: 24px;
+  }
+
+  .digital-cta h2 {
+    font-size: 24px;
+  }
+}

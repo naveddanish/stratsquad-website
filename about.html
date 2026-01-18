@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About Us | StratSquad</title>
+  <meta name="description" content="StratSquad is a consulting firm specialising in business expansion, transformation, and marketing. We work with boards, promoters, and CXOs to build valuation-led growth.">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="about.css">
+  <link rel="stylesheet" href="style.css">
+  
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+<header class="site-header">
+  <div class="header-container">
+
+    <div class="logo-area">
+      <a href="index.html">
+        <span class="logo">StratSquad</span>
+        <span class="tagline">Strategy • Transformation • Growth</span>
+      </a>
+    </div>
+
+    <!-- Hamburger Menu Button -->
+    <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="about.html" class="active">About</a>
+      <a href="services.html">Services</a>
+      <a href="digital.html">Digital</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+  </div>
+</header>
+
+<!-- ================= PAGE INTRO ================= -->
+<section class="page-intro image-intro">
+  <div class="intro-overlay"></div>
+
+  <div class="intro-container">
+    <h1>About StratSquad</h1>
+
+    <p>
+      StratSquad is a consulting firm specialising in business expansion,
+      transformation, and marketing. We collaborate closely with boards,
+      promoters, and CXOs to build valuation-led growth.
+    </p>
+  </div>
+</section>
+
+<!-- ================= ABOUT DETAIL ================= -->
+<section class="about-detail">
+  <div class="content-container narrow">
+
+    <p>
+      With deep expertise across retail, consumer services, and digital-first
+      brands, we translate business objectives into insight-driven,
+      customer-centric strategies backed by data, creativity, and technology.
+    </p>
+
+    <p>
+      Our approach combines strategic clarity, modern digital ecosystems for
+      real-time visibility, AI-enabled tools, and omni-channel thinking to
+      accelerate decision-making, strengthen competitive advantage, and drive
+      measurable outcomes.
+    </p>
+
+  </div>
+</section>
+
+<!-- ================= MISSION & VISION ================= -->
+<section class="mission-vision">
+  <div class="content-container two-column">
+
+    <div class="mv-card">
+      <h2 class="section-title">Mission</h2>
+      <p>
+        To craft strategies that create clarity and order in today's disruptive
+        business ecosystem, enabling organisations to scale with precision
+        and purpose.
+      </p>
+    </div>
+
+    <div class="mv-card">
+      <h2 class="section-title">Vision</h2>
+      <p>
+        To build sustainable long-term value for businesses through
+        data-backed strategy, digital integration, and conscious leadership
+        that enhances talent, customer experience, and environmental
+        responsibility.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= CORE VALUES ================= -->
+<section class="core-values">
+  <div class="content-container">
+
+    <h2 class="section-title center">Core Values</h2>
+
+    <div class="values-grid">
+
+      <div class="value-card">
+        <span>01</span>
+        <h3>Clarity</h3>
+        <p>
+          Sharing simple, actionable strategies grounded in market insight
+          to navigate a disruptive business ecosystem.
+        </p>
+      </div>
+
+      <div class="value-card">
+        <span>02</span>
+        <h3>Precision</h3>
+        <p>
+          Delivering data-backed strategic solutions that ensure effective,
+          reliable, and measurable results.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= LEADERSHIP ================= -->
+<section class="leadership">
+  <div class="content-container">
+
+    <h2 class="section-title center">Leadership Team</h2>
+
+    <div class="leadership-grid">
+
+      <div class="leader-card">
+        <h4>Anand Jadhav</h4>
+        <span>Co-Founder</span>
+        <p>
+          A strategic transformation leader with 30+ years across retail,
+          consumer services, and digital. Trusted by investors and boards
+          to drive valuation-centric growth.
+        </p>
+      </div>
+
+      <div class="leader-card">
+        <h4>Gururaj Nabar</h4>
+        <span>Co-Founder</span>
+        <p>
+          Strategic marketing and communication consultant specialising in
+          insight-led, consumer-centric brand and marketing strategies
+          across channels.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="site-footer">
+  <div class="footer-container">
+
+    <div class="footer-logo">StratSquad</div>
+    <div class="footer-tagline">Strategy • Transformation • Growth</div>
+
+    <div class="footer-info">
+      <p>Mumbai, India</p>
+      <p><a href="mailto:connect@stratsquad.com">connect@stratsquad.com</a></p>
+    </div>
+
+    <div class="footer-copy">
+      &copy; 2026 StratSquad. All rights reserved.
+    </div>
+
+  </div>
+</footer>
+
+<!-- ================= JAVASCRIPT ================= -->
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('navLinks');
+  
+  // Toggle menu
+  hamburger.addEventListener('click', function(e) {
+    e.stopPropagation();
+    this.classList.toggle('active');
+    navLinks.classList.toggle('active');
+    
+    // Prevent body scroll when menu is open
+    if (navLinks.classList.contains('active')) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+  });
+  
+  // Close menu when clicking nav links
+  const navItems = navLinks.querySelectorAll('a');
+  navItems.forEach(item => {
+    item.addEventListener('click', function() {
+      hamburger.classList.remove('active');
+      navLinks.classList.remove('active');
+      document.body.style.overflow = '';
+    });
+  });
+  
+  // Close menu when clicking outside
+  document.addEventListener('click', function(e) {
+    if (window.innerWidth <= 768) {
+      if (!navLinks.contains(e.target) && !hamburger.contains(e.target)) {
+        hamburger.classList.remove('active');
+        navLinks.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    }
+  });
+  
+  // Reset on window resize
+  window.addEventListener('resize', function() {
+    if (window.innerWidth > 768) {
+      hamburger.classList.remove('active');
+      navLinks.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+  });
+</script>
+
+</body>
+</html>
